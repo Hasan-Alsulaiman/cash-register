@@ -73,7 +73,7 @@ let sums = arr.reduce((sums, item) => {
 }, []);
 return sums;
 }
-let sums = shit(change)
+let sums = sumDuplicates(change)
 console.log(sums);
 
  
