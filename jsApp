@@ -29,16 +29,16 @@ function checkCashRegister(price, cash, cid) {
     }
   }
   //function to subtract
-  function subtractor(dif, lvl) {
-    if (cid[lvl][1] != 0) {
+   function subtractor(dif, lvl) {
+  if (cid[lvl][1] != 0) {
       dif = dif.toFixed(2)
       dif = dif - currency[lvl][1]
       cid[lvl][1] -= currency[lvl][1]
-      change.push(currency[lvl])
+      change.push([...currency[lvl]]) // < push a copy not the original ref
+      
       return dif
-    }
-
-  }
+   }
+ }
 
 
   //if no change needed
